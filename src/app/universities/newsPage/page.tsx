@@ -17,7 +17,7 @@ const page = () => {
   const links = ["Home", "Universities", "LPU Online"];
 
   return (
-    <div className="pb-32 bg-WhiteAccent">
+    <div className="bg-WhiteAccent pb-32">
       <Navbar />
       <SkollegeHighlightsSlider />
 
@@ -39,51 +39,40 @@ const page = () => {
         <Articles />
       </div>
 
-
-
-
       <div className="bg-WhiteAccent">
         <div className=" text-TitleText font-nunitoSans text-2xl py-5 font-bold leading-loose px-6 md:text-[31.27px]  md:leading-[37.52px] md:tracking-tight md:px-8 lg:px-10 lg:text-[44px]  lg:leading-[52.80px]  ">
-         Popular Articles
+          Popular Articles
         </div>
 
         <NewsArticles />
       </div>
 
       <div className="md:hidden py-5 bg-WhiteAccent">
-
-      <ScholarshipBanner
-        title="Earn up to 100% scholarship"
-        description="Skollege offers an option to earn up to 100% scholarship to selected students based on the test results. Be the first to grab it now"
-        buttonText="Enroll Now"
-        registrationCount={290}
-      />
-
+        <ScholarshipBanner
+          title="Earn up to 100% scholarship"
+          description="Skollege offers an option to earn up to 100% scholarship to selected students based on the test results. Be the first to grab it now"
+          buttonText="Enroll Now"
+          registrationCount={290}
+        />
       </div>
 
       <div className="py-10 bg-WhiteAccent">
-
-      <ScholarshipBanners/>
-
+        <ScholarshipBanners />
       </div>
 
       <div className="bg-WhiteAccent">
-      <div className=" px-8 text-TitleText font-nunitoSans mt-5 xs:text-xl sm:text-2xl font-bold 
+        <div
+          className=" px-8 text-TitleText font-nunitoSans mt-5 xs:text-xl sm:text-2xl font-bold 
        md:text-[32px] md:leading-10
          lg:text-slate-900  lg:text-[44px]  lg:font-bold  lg:leading-[55px]
         ">
           Top Learning Programs
         </div>
 
-    <DemandedFreeCourses/>
-    
-    </div>
- 
-     
+        <DemandedFreeCourses />
+      </div>
 
-
-
-      <Footer/>
+      <Footer />
     </div>
   );
 };

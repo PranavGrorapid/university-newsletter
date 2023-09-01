@@ -9,6 +9,8 @@ const Articles = () => {
   const [cardsToShow, setCardsToShow] = useState(1);
   const [currentCard, setCurrentCard] = useState(0);
 
+  // dummy array of news
+
   const dummyNews = [
     {
       id: 1,
@@ -78,9 +80,13 @@ const Articles = () => {
     },
   ];
 
+  // when we click on this button next set of cards will come
+
   const goToSlide = (slideIndex: React.SetStateAction<number>) => {
     setCurrentCard(slideIndex);
   };
+
+  // using useeffect hook to give the number of cards each device needed
 
   useEffect(() => {
     const handleResize = () => {
@@ -105,16 +111,18 @@ const Articles = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, [cardsToShow]);
 
+  // using the slice method to control the list of cards to display
+
   const displayedUsers = dummyNews.slice(
     currentCard,
     currentCard + cardsToShow
   );
 
-  console.log("display", displayedUsers.length);
-
   return (
     <div className="flex flex-col py-6 md:py-10 bg-WhiteAccent  relative px-6 md:px-8 lg:px-10  ">
       <div className="flex justify-start mx-auto md:mx-0 md:gap-10">
+        {/* passing the dummy news data to article card component */}
+
         {displayedUsers.map((dummyNews, index) => (
           <ArticleCard
             key={dummyNews.id}
@@ -128,14 +136,15 @@ const Articles = () => {
         ))}
       </div>
 
+      {/* this code is used for generating dots below */}
+
       <div className="flex justify-center mt-5">
         {Array.from({ length: Math.ceil(dummyNews.length / cardsToShow) }).map(
           (_, slideIndex) => (
             <div
               key={slideIndex}
               onClick={() => goToSlide(slideIndex * cardsToShow)}
-              className="text-2xl cursor-pointer text-PrimaryBlue"
-            >
+              className="text-2xl cursor-pointer text-PrimaryBlue">
               <RxDotFilled />
             </div>
           )

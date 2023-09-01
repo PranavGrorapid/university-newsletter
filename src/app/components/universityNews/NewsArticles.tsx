@@ -3,7 +3,6 @@ import mobileNews from "../../../../public/images/newsletter/newsRectangleMob.pn
 import ArticlenewsCard from "../articlenewsCard/page";
 
 const NewsArticles = () => {
-
   const dummyNews = [
     {
       id: 1,
@@ -72,7 +71,6 @@ const NewsArticles = () => {
         return (
           <ArticlenewsCard
             key={news.id}
-           
             date={news.date}
             readTime={news.readTime}
             likes={news.likes}

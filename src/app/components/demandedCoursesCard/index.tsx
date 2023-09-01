@@ -23,14 +23,16 @@ const DemandedCoursesCard = ({
 
         <div className="flex justify-center items-center gap-1">
           <div>
-            <img src="/images/HomePage/multipleusers.svg" alt="users" className="md:w-[18.99px] md:h-[18.89px] lg:w-[27px] lg:h-[27px]" />
+            <img
+              src="/images/HomePage/multipleusers.svg"
+              alt="users"
+              className="md:w-[18.99px] md:h-[18.89px] lg:w-[27px] lg:h-[27px]"
+            />
           </div>
 
-          <div className="w-[35.81px] text-neutral-800 text-[4.02px] font-bold tracking-tight md:w-[62.61px] md:text-neutral-800 md:text-[7.04px] lg:w-[89px] lg:text-[10px]">
+          <div className="w-[35.81px] text-TitleText text-[4.02px] font-bold tracking-tight md:w-[62.61px] md:text-neutral-800 md:text-[7.04px] lg:w-[89px] lg:text-[10px]">
             {totalUsers}
           </div>
-
-         
         </div>
       </div>
 
@@ -54,15 +56,15 @@ const DemandedCoursesCard = ({
             </div>
           </div>
 
-          <div className="w-[61.79px] h-[21.26px] px-[13.90px] py-[4.63px] bg-PrimaryBlue rounded-sm justify-center items-center gap-[4.63px] inline-flex
+          <div
+            className="w-[61.79px] h-[21.26px] px-[13.90px] py-[4.63px] bg-PrimaryBlue rounded-sm justify-center items-center gap-[4.63px] inline-flex
           md:w-[90px] md:h-[36.20px] md:py-[8.10px] md:rounded  md:gap-[8.10px] lg:w-[154.08px] lg:h-[51.03px
-          ">
+          "
+          >
             <button className="text-center font-nunitoSans text-WhiteAccent text-[6.49px] font-bold leading-[11.12px] md:text-[10px]">
               Enroll Now
             </button>
           </div>
-
-
         </div>
       </div>
     </div>

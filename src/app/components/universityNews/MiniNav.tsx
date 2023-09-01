@@ -22,9 +22,9 @@ const navLinks = [
 const MiniNav = () => {
   return (
     <div>
-      {/* Other content */}
+     
       <MiniNavbar navLinks={navLinks}  /> 
-      {/* Other content */}
+      
     </div>
   );
 };
