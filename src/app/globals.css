@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+
+
+/* Add this CSS to your stylesheet */
+.scrolls-container {
+  
+  position: relative;
+}
+
+.scrolls-content {
+  display: flex;
+
+  -ms-overflow-style: none; /* Hide scrollbar on Internet Explorer */
+  scrollbar-width: none; /* Hide scrollbar on Firefox */
+}
+
+.scrolls-content::-webkit-scrollbar {
+  display: none; /* Hide scrollbar on Webkit-based browsers */
+}
+
+.texter{
+
+  background: rgb(0, 0, 0);/* Fallback color */
+  background: rgba(0, 0, 0, 0.5);/* Black background with opacity */
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
